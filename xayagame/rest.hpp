@@ -38,7 +38,7 @@ private:
   /**
    * Request handler function for MHD.
    */
-  static int RequestCallback (void* data, struct MHD_Connection* conn,
+  static MHD_Result RequestCallback (void* data, struct MHD_Connection* conn,
                               const char* url, const char* method,
                               const char* version,
                               const char* upload, size_t* uploadSize,
@@ -48,7 +48,7 @@ private:
 
 protected:
 
-  struct SuccessResult;
+  class SuccessResult;
   class HttpError;
 
   /**

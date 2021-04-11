@@ -151,7 +151,7 @@ ShipsChannelRpcServer::ExtendStateJson (Json::Value&& state) const
   if (channel.IsPositionSet ())
     state["myships"] = channel.GetPosition ().ToString ();
 
-  return state;
+  return std::move(state);
 }
 
 void

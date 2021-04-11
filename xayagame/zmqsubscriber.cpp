@@ -149,7 +149,7 @@ bool
 CheckTopicPrefix (const std::string& topic, const std::string& prefix,
                   std::string& suffix)
 {
-  if (!topic.compare (0, prefix.size (), prefix) == 0)
+  if ((!topic.compare (0, prefix.size (), prefix)) == 0)
     return false;
 
   suffix = topic.substr (prefix.size ());

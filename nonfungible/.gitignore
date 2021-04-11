@@ -1,2 +1,3 @@
 nonfungibled
 schema.cpp
+*.o

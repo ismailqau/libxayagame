@@ -211,7 +211,7 @@ public:
 
 } // anonymous namespace
 
-int
+MHD_Result
 RestApi::RequestCallback (void* data, struct MHD_Connection* conn,
                           const char* url, const char* method,
                           const char* version,
@@ -238,7 +238,7 @@ RestApi::RequestCallback (void* data, struct MHD_Connection* conn,
       resp.Set (code, "text/plain", msg);
     }
 
-  return resp.Queue (conn);
+  return (MHD_Result)resp.Queue (conn);
 }
 
 void

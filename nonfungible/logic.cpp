@@ -73,7 +73,7 @@ Json::Value
 NonFungibleLogic::GetCustomStateData (xaya::Game& game, const StateCallback& cb)
 {
   return SQLiteGame::GetCustomStateData (game, "data",
-      [this, &cb] (const xaya::SQLiteDatabase& db)
+      [&cb] (const xaya::SQLiteDatabase& db)
         {
           const StateJsonExtractor ext(db);
           return cb(ext);

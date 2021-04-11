@@ -27,8 +27,7 @@ libxayagame_la_LIBADD = \
   $(OPENSSL_LIBS) \
   $(JSONCPP_LIBS) $(JSONRPCCLIENT_LIBS) $(JSONRPCSERVER_LIBS) \
   $(ZLIB_LIBS) $(CURL_LIBS) $(MHD_LIBS) \
-  $(GLOG_LIBS) $(SQLITE3_LIBS) $(LMDB_LIBS) $(ZMQ_LIBS) \
-  -lstdc++fs
+  $(GLOG_LIBS) $(SQLITE3_LIBS) $(LMDB_LIBS) $(ZMQ_LIBS)
 libxayagame_la_SOURCES = \
   defaultmain.cpp \
   game.cpp \
